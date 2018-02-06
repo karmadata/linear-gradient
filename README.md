@@ -33,4 +33,7 @@ console.log(grad1.calcArray(0.25)); // -> [0,100,20] (weighted average between [
 console.log(grad1.calcArray(0.5));
 console.log(grad1.calcArray(0.75));
 
+console.log(grad1.calcHex(1));  // -> '#ffffff'
+console.log(grad1.calcHex(0.25));   // -> '#006416'
+
 ```

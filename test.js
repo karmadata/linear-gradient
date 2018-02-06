@@ -14,3 +14,10 @@ console.log(grad1.calcArray(1));
 console.log(grad1.calcArray(0.25));
 console.log(grad1.calcArray(0.5));
 console.log(grad1.calcArray(0.75));
+
+console.log(grad1.calcHex(0));
+console.log(grad1.calcHex(1));
+console.log(grad1.calcHex(0.25));
+console.log(grad1.calcHex(0.5));
+console.log(grad1.calcHex(0.75));
+

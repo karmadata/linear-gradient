@@ -1,3 +1,11 @@
+function pad2(str) {
+    return str.length == 1 ? '0' + str : str;
+}
+
+function tohex(rgb) {
+    return '#' + pad2(rgb[0].toString(16)) + pad2(rgb[1].toString(16)) + pad2(rgb[2].toString(16));
+}
+
 function Gradient(colors) {
     // ensure constructor variables are valid
     if (colors.length == null || colors.length < 2) throw new Error('needs at least two colors to instantiate linear-gradient');
@@ -28,6 +36,10 @@ Gradient.prototype.calcArray = function(value) {
     var g = lowerColor[1] * (1 - decimal) + higherColor[1] * decimal;
     var b = lowerColor[2] * (1 - decimal) + higherColor[2] * decimal;
     return [Math.round(r), Math.round(g), Math.round(b)];
+}
+
+Gradient.prototype.calcHex = function(value) {
+    return tohex(this.calcArray(value));
 }
 
 module.exports = Gradient;
